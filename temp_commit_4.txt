@@ -1,1 +1,0 @@
-feat: Implement email sending functionality
