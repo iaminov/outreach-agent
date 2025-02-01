@@ -1,0 +1,1 @@
+test: Increase test coverage for email sender
