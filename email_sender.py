@@ -9,7 +9,7 @@ from smtplib import SMTPException
 logger = logging.getLogger(__name__)
 
 class EmailSender:
-    """Advanced email sender with comprehensive error handling and logging."""
+    """Email sender with error handling and logging."""
     
     def __init__(self, smtp_server: str, smtp_port: int, username: str, password: str):
         """

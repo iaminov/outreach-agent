@@ -6,7 +6,7 @@ from requests.exceptions import RequestException, HTTPError
 logger = logging.getLogger(__name__)
 
 class ClickUpClient:
-    """Advanced client for ClickUp API with comprehensive error handling and task management."""
+    """Client for ClickUp API with error handling and task management."""
     
     def __init__(self, api_key: str | None = None):
         """

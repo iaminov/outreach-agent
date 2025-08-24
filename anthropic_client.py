@@ -7,7 +7,7 @@ from anthropic import APIError, RateLimitError
 logger = logging.getLogger(__name__)
 
 class AnthropicClient:
-    """Advanced client for Anthropic Claude AI API with comprehensive error handling and logging."""
+    """Client for Anthropic Claude AI API with error handling and logging."""
     
     def __init__(self, api_key: str | None = None):
         """

@@ -38,7 +38,7 @@ class OutreachConfig:
     offer: str
 
 class OutreachAgent:
-    """Advanced outreach agent that orchestrates multi-platform lead generation and follow-up."""
+    """Outreach agent that orchestrates multi-platform lead generation and follow-up."""
     
     def __init__(self, config: OutreachConfig):
         self.config = config
@@ -275,19 +275,21 @@ def main():
         performance_metrics = agent.get_performance_metrics(campaign_stats)
         
         logger.info("Outreach campaign completed successfully")
-        print(f"\nCampaign Summary:")
-        print(f"Total Leads: {campaign_stats['total_leads']}")
-        print(f"Validated: {campaign_stats['validated_leads']}")
-        print(f"Messages Generated: {campaign_stats['messages_generated']}")
-        print(f"Emails Sent: {campaign_stats['emails_sent']}")
-        print(f"Tasks Created: {campaign_stats['tasks_created']}")
-        print(f"Failed: {campaign_stats['failed_leads']}")
+        print(f"""\nCampaign Summary:
+        Total Leads: {campaign_stats['total_leads']}
+        Validated: {campaign_stats['validated_leads']}
+        Messages Generated: {campaign_stats['messages_generated']}
+        Emails Sent: {campaign_stats['emails_sent']}
+        Tasks Created: {campaign_stats['tasks_created']}
+        Failed: {campaign_stats['failed_leads']}
+        """)
         
-        print(f"\nPerformance Metrics:")
-        print(f"Total Processing Time: {performance_metrics['total_processing_time']:.2f}s")
-        print(f"Average Message Generation: {performance_metrics['average_message_time']:.2f}s")
-        print(f"Average Email Sending: {performance_metrics['average_email_time']:.2f}s")
-        print(f"Average Task Creation: {performance_metrics['average_task_time']:.2f}s")
+        print(f"""\nPerformance Metrics:
+        Total Processing Time: {performance_metrics['total_processing_time']:.2f}s
+        Average Message Generation: {performance_metrics['average_message_time']:.2f}s
+        Average Email Sending: {performance_metrics['average_email_time']:.2f}s
+        Average Task Creation: {performance_metrics['average_task_time']:.2f}s
+        """)
         
     except ValueError as e:
         logger.error(f"Configuration error: {e}")
@@ -297,4 +299,4 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
-    main() 
+    main()
